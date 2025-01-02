@@ -8,4 +8,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const userInput = document.getElementById("userInput");
   const chatMessages = document.getElementById("chatMessages");
   const sendButton = document.getElementById("sendButton");
+
+  //Auto resize the text area
+  userInput.addEventListener("input", () => {
+    userInput.style.height = "auto";
+    userInput.style.height = userInput.scrollHeight + "px";
+  });
 });
